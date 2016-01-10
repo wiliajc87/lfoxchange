@@ -12,7 +12,7 @@ class QuestionsController < ApplicationController
   # NEW ANSWER FORM WILL GO HERE
   def show
     @answer = Answer.new
-    @answers = Answer.where(question: @question) ||= []
+    @answers = Answer.where(question: @question)
   end
 
   # GET /questions/new
