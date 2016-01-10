@@ -1,0 +1,10 @@
+-if flash[:incorrect_log_in]
+  -flash.each do |name, msg|
+    #{content_tag :div, msg}
+=form_for :session, url: { controller: "sessions", action: "create"} do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.label :password
+  = f.password_field :password
+  = f.submit "Login"
+  = link_to "Create a New User", new_user_path
