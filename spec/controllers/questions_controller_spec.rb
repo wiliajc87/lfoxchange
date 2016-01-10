@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe QuestionsController, type: :controller do
 before :each do
-    @user = User.create(name: "User1")
+    @user = User.create(name: "User1", password: "password")
 end
 
   describe "GET index" do

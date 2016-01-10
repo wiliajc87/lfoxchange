@@ -5,14 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create([{ name: 'jwilliams' },
-			 { name: 'eobi'},
-			 { name: 'cwalsh'},
-			 { name: 'zbosteel' },
-			 { name: 'jstern' },
-			 { name: 'jfosco' },
-			 { name: 'aurasky' },
-			])
+User.create([{ name: 'jwilliams', password: 'password'},
+	          { name: 'eobi', password: 'password'},
+	          { name: 'cwalsh', password: 'password'},
+	          { name: 'zbosteel', password: 'password'},
+	          { name: 'jstern', password: 'password'},
+	          { name: 'jfosco', password: 'password'},
+	          { name: 'aurasky', password: 'password'},
+	       ])
 
 Question.create([
 		{

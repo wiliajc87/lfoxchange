@@ -15,7 +15,7 @@ class AnswersController < ApplicationController
         format.html { redirect_to @answer.question, notice: 'Thanks for your contribution–Answer was saved!' }
         format.json { render :show, status: :created, location: @answer.question }
       else
-        format.html { render :new }
+        format.html { redirect_to @answer.question, notice: 'Error: Answer was not saved.' }
         format.json { render json: @answer.errors, status: :unprocessable_entity }
       end
     end
