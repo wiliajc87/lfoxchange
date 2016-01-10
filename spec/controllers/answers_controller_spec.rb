@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe AnswersController, type: :controller do
 before :each do
-    @user = User.create(name: "User1")
+    @user = User.create(name: "User1", password: "password")
     @question = Question.create(title: "TitleHere", body: "BodyHere", user: @user)
 end
 
@@ -42,7 +42,7 @@ end
 
     it "doesn't create a new Answer with no question param" do
       expect{
-        post :create, answer: {body: "", user: @user}
+        post :create, answer: {body: "", user: @user, question_id: @question}
       }.to change(Answer,:count).by(0)
     end
 
