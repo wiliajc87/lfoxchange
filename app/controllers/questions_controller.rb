@@ -11,6 +11,7 @@ class QuestionsController < ApplicationController
   # GET /questions/1.json
   # NEW ANSWER FORM WILL GO HERE
   def show
+    @answer = Answer.new
   end
 
   # GET /questions/new
