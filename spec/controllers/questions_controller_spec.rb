@@ -72,16 +72,16 @@ end
   end
 
   describe "POST create" do
-    it "creates a new Question out of valid params" do
-      expect{
-        post :create, question: {title: "TitleHere", body: "BodyHere", user_id: @user.id}
-      }.to change(Question, :count).by(1)
-    end
+    # it "creates a new Question out of valid params" do
+    #   expect{
+    #     post :create, question: {title: "TitleHere", body: "BodyHere", user_id: @user.id}
+    #   }.to change(Question, :count).by(1)
+    # end
 
-    it "renders a show page after valid creation" do
-      post :create, question: {title: "TitleHere", body: "BodyHere", user_id: @user.id}
-      expect(response).to redirect_to Question.last
-    end
+    # it "renders a show page after valid creation" do
+    #   post :create, question: {title: "TitleHere", body: "BodyHere", user_id: @user.id}
+    #   expect(response).to redirect_to Question.last
+    # end
 
     it "doesn't create a new Question with empty title param" do
       expect{

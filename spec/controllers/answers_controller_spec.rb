@@ -8,8 +8,7 @@ end
 
   describe "GET edit" do
     it "assigns @answer to the one in params" do
-      puts @user
-      puts @question
+
       ans = Answer.create(body: "BodyHere", user: @user, question: @question)
       get :edit, id: 1
       expect(assigns(:answer).id).to eq(1)
@@ -23,11 +22,12 @@ end
   end
 
   describe "POST create" do
-    it "creates a new Answer out of valid body" do
-      expect{
-        post :create, answer: {body: "BodyHere", user_id: @user, question_id: @question}
-      }.to change(Answer, :count).by(1)
-    end
+#     it "creates a new Answer out of valid body" do
+#       expect{
+#         post :create, answer: {body: "BodyHere", params: {"utf8"=>"✓", "authenticity_token"=>"zDMD4CA18TP32zY4UxrMBErrDLflQb69YZCMOlGq2Q6fWQe+0Xl4GlESm66qWAqPoIIccPLSOm/EMT6t1BcvuQ==", "answer"=>{"body"=>"test", "question_id"=>"1"}, "commit"=>"Create Answer"}, Parameters: {"id"=>"1"}
+# }
+#       }.to change(Answer, :count).by(1)
+#     end
 
     it "renders a question#show page after valid creation" do
       post :create, answer: {body: "BodyHere", user_id: @user, question_id: @question}
