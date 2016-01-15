@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
   # GET /questions/1.json
   def show
     @answer = Answer.new
-    @answers = Answer.where(question: @question)
+    @answers = Answer.where(question: @question).sort_by {|a,b| b <=> a}
   end
 
   # GET /questions/new
