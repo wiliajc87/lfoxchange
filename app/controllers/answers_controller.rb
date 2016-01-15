@@ -10,6 +10,7 @@ class AnswersController < ApplicationController
   def create
     @answer = Answer.new(answer_params)
     @answer.user_id = session[:user_id]
+    @answer.question_id = params[:answer][:question_id]
     respond_to do |format|
       if @answer.save
         format.html { redirect_to @answer.question, notice: 'Thanks for your contribution–Answer was saved!' }
@@ -54,6 +55,6 @@ class AnswersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def answer_params
-      params.require(:answer).permit(:body, :question_id)
+      params.require(:answer).permit(:body)
     end
 end
