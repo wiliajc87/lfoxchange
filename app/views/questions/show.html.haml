@@ -17,6 +17,7 @@
     %ul
       %li= answer.body
       %li= answer.user.name
+      %li= answer.points
       %li= link_to 'Show', answer
       %li= link_to 'Edit', edit_answer_path(answer)
       %li= link_to 'Destroy', answer, method: :delete, data: { confirm: 'Are you sure?' }
