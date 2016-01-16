@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
   # GET /questions/1.json
   def show
     @answer = Answer.new
-    @answers = Answer.where(question: @question).order(:cached_votes_total => :desc)
+    @answers = Answer.where(question: @question).order(:cached_votes_up => :desc)
   end
 
   # GET /questions/new
