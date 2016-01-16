@@ -62,26 +62,22 @@ Answer.create([
 		{
 			body: "It'll come when it comes.",
 			question_id: 1,
-			user_id: 1,
-			points: 5,
+			user_id: 1
 		},
 		{
 			body: "Once the Lannisters have paid everybody.",
 			question_id: 1,
-			user_id: 5,
-			points: 2,
+			user_id: 5
 		},
 		{
 			body: "I dunno. When it feels like it?",
 			question_id: 1,
-			user_id: 2,
-			points: 3,
+			user_id: 2
 		},
 		{
 			body: "Oa",
 			question_id: 3,
-			user_id: 1,
-			points: 10,
+			user_id: 1
 		},
 	]
 )
