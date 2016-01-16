@@ -47,6 +47,20 @@ class AnswersController < ApplicationController
     end
   end
 
+  def upvote
+    @question = Question.find(params[:question_id])
+    @answer = @question.answers.find(params[:answer_id])
+    @answer.upvote_by current_user
+    redirect_to :back
+  end
+
+  def downvote
+    @question = Question.find(params[:question_id])
+    @answer = @question.answers.find(params[:answer_id])
+    @answer.downvote_by current_user
+    redirect_to :back
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_answer

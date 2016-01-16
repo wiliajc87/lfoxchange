@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe QuestionsController, type: :controller do
-before :each do
-    @user = User.create(name: "User1", password: "password")
-end
+  before :each do
+      @user = User.create(name: "User1", password: "password")
+  end
 
   describe "GET index" do
     it "assigns @questions" do
@@ -72,16 +72,18 @@ end
   end
 
   describe "POST create" do
-    # it "creates a new Question out of valid params" do
-    #   expect{
-    #     post :create, question: {title: "TitleHere", body: "BodyHere", user_id: @user.id}
-    #   }.to change(Question, :count).by(1)
-    # end
+    it "creates a new Question out of valid params" do
+        session[:user_id] = 1
+        expect{
+        post :create, question: {title: "TitleHere", body: "BodyHere"}
+      }.to change(Question, :count).by(1)
+    end
 
-    # it "renders a show page after valid creation" do
-    #   post :create, question: {title: "TitleHere", body: "BodyHere", user_id: @user.id}
-    #   expect(response).to redirect_to Question.last
-    # end
+    it "renders a show page after valid creation" do
+      session[:user_id] = 1
+      post :create, question: {title: "TitleHere", body: "BodyHere", user_id: @user.id}
+      expect(response).to redirect_to Question.last
+    end
 
     it "doesn't create a new Question with empty title param" do
       expect{
