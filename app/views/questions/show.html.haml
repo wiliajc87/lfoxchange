@@ -17,10 +17,11 @@
     %ul
       %li= answer.body
       %li= answer.user.name
-      %li= answer.points
-      %li= link_to 'Show', answer
-      %li= link_to 'Edit', edit_answer_path(answer)
-      %li= link_to 'Destroy', answer, method: :delete, data: { confirm: 'Are you sure?' }
+      %li= link_to 'Edit', edit_question_answer_path(@question, answer)
+      %li= link_to 'Destroy', question_answer_path(@question, answer), data: { confirm: 'Are you sure?' }
+      %li= link_to 'UpVote', question_answer_like_path(@question, answer.id), method: :put
+      %li= answer.get_upvotes.size
+      %li= link_to 'UnVote', question_answer_dislike_path(@question, answer.id), method: :put
 
 
 
