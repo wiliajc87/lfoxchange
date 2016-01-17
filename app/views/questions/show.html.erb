@@ -1,0 +1,41 @@
+<p id="notice">
+  <%= notice %>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%= @question.title %>
+</p>
+<p>
+  <strong>Body:</strong>
+  <%= @question.body %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%= @question.user.name %>
+</p>
+<% if @question.user == current_user %>
+  <%= link_to 'Edit', edit_question_path(@question) %>
+|
+<% end %>
+<%= link_to 'Back', questions_path %>
+<% if !@answers.empty? %>
+  <% @answers.each do |answer| %>
+    <ul>
+      <li><%= answer.body %></li>
+      <li><%= answer.user.name %></li>
+      <% if answer.user == current_user %>
+        <li><%= link_to 'Edit', edit_question_answer_path(@question, answer) %></li>
+        <li><%= link_to 'Destroy', question_answer_path(@question, answer), data: { confirm: 'Are you sure?' } %></li>
+      <% end %>
+      <li><%= answer.get_upvotes.size %></li>
+      <% if current_user.voted_up_on?(answer) %>
+        <li><%= link_to 'UnVote', question_answer_dislike_path(@question, answer.id), method: :put %></li>
+      <% else %>
+        <li><%= link_to 'UpVote', question_answer_like_path(@question, answer.id), method: :put %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
+<%  if current_user %>
+  <%= render 'answer_form' %>
+<% end %>
