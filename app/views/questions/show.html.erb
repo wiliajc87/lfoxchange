@@ -25,13 +25,15 @@
       <li><%= answer.user.name %></li>
       <% if answer.user == current_user %>
         <li><%= link_to 'Edit', edit_question_answer_path(@question, answer) %></li>
-        <li><%= link_to 'Destroy', question_answer_path(@question, answer), data: { confirm: 'Are you sure?' } %></li>
+        <li><%= link_to 'Destroy', question_answer_path(@question, answer), method: :delete, data: { confirm: 'Are you sure?' } %></li>
       <% end %>
       <li><%= answer.get_upvotes.size %></li>
-      <% if current_user.voted_up_on?(answer) %>
-        <li><%= link_to 'UnVote', question_answer_dislike_path(@question, answer.id), method: :put %></li>
-      <% else %>
-        <li><%= link_to 'UpVote', question_answer_like_path(@question, answer.id), method: :put %></li>
+      <% if current_user %>
+        <% if current_user.voted_up_on?(answer) %>
+          <li><%= link_to 'UnVote', question_answer_dislike_path(@question, answer.id), method: :put %></li>
+        <% else %>
+          <li><%= link_to 'UpVote', question_answer_like_path(@question, answer.id), method: :put %></li>
+        <% end %>
       <% end %>
     </ul>
   <% end %>
