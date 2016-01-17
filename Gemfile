@@ -29,7 +29,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 # This might be a disaster.
 gem 'acts_as_votable', '~> 0.10.0'
-
+gem 'kaminari'
+gem 'ransack'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

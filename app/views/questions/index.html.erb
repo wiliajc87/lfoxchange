@@ -19,6 +19,6 @@
     <% end %>
   <% end %>
 </ul>
-<br/>
-<% if current_user %>
-<% end %>
+<div>
+  <%= paginate @questions %>
+</div>
