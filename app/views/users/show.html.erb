@@ -1,0 +1,18 @@
+<p id="notice">
+  <%= notice %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+  <% unless @questions.empty? %>
+    <h2>Your Questions: </h2>
+      <% @questions.each do |question| %>
+        <ul>
+          <li><%= link_to question.title, question_path %></li>
+        </ul>
+      <% end %>
+    <% else %>
+      <h3>You haven't asked any questions yet!</h3>
+      <%= link_to 'New Question', new_question_path %>
+    <% end %>
+</p>

@@ -1,0 +1,26 @@
+<%= link_to "Logout", session_path(session[:user_id]), method: :delete if session[:user_id] %>
+<p id="notice">
+  <%= notice %>
+</p>
+<h1>Listing Questions</h1>
+<ul>
+  <% @questions.each do |question| %>
+    <li>
+      <%= link_to question.title.to_s, question %>
+    </li>
+    <% if question.user == current_user %>
+      <ul>
+        <li>
+          <%= link_to 'Edit', edit_question_path(question) %>
+        </li>
+        <li>
+          <%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </li>
+      </ul>
+    <% end %>
+  <% end %>
+</ul>
+<br/>
+<% if current_user %>
+  <%= link_to 'New Question', new_question_path %>
+<% end %>
