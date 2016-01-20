@@ -3,7 +3,15 @@
 </p>
 <h1>Listing Questions</h1>
 <ul>
-  <% @questions.each do |question| %>
+
+<%= search_form_for @q do |f| %>
+
+  <%= f.label "Term Search:" %>
+  <%= f.search_field :title_or_body_cont %>
+  <%= f.submit %>
+<% end %>
+
+  <% @results.each do |question| %>
     <li>
       <%= link_to question.title.to_s, question %>
     </li>
@@ -20,5 +28,5 @@
   <% end %>
 </ul>
 <div>
-  <%= paginate @questions %>
+  <%= paginate @results %>
 </div>

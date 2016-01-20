@@ -4,7 +4,8 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
   def index
-    @questions = Question.order("created_at desc").page(params[:page])
+    @q = Question.ransack(params[:q])
+    @results = @q.result.page(params[:page]).order("created_at desc")
   end
 
   # GET /questions/1
