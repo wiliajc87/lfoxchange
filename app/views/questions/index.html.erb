@@ -7,6 +7,7 @@
   <% @questions.each do |question| %>
     <li>
       <%= link_to question.title.to_s, question %>
+        Answers Given: <%= question.answers.count %>
     </li>
     <% if question.user == current_user %>
       <ul>
