@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
+gem 'twitter-bootstrap-rails'
 gem "haml-rails", "~> 0.9"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -28,7 +29,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 # This might be a disaster.
 gem 'acts_as_votable', '~> 0.10.0'
-
+gem 'kaminari'
+gem 'ransack'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
