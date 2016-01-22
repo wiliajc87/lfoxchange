@@ -55,6 +55,141 @@ Question.create([
 			body: 'He certainly destroyed the films reviews!',
 			user_id: 7,
 		},
+		{
+			title: 'Precipice',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+		{
+			title: 'Paragon',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+		{
+			title: 'Skeyborn',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+		{
+			title: 'Annihilation',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+		{
+			title: 'Fatal Alliance',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'Pantheon',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'Pandemonium',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Rising Force',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Dark Rival',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Hidden Past',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Captive Temple',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Day of Reckoning',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Fight for Truth',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'What if Jar Jar Binks really WAS the Phantom Menace?',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Call to Vengeance',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Threat Withing',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Shattered Peace',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Ties that Bind',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'Secrets of the Jedi',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'Shadows of the Empire',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Bounty Hunter Wars',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Truce at Bakura',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Shadows of Mindor',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'Heir to the Empire',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'Dark Force Rising',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'The Last Command',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
+				{
+			title: 'Darksaber',
+			body: 'He certainly destroyed the films reviews!',
+			user_id: 7,
+		},
 	]
 )
 

@@ -1,10 +1,17 @@
-<%= link_to "Logout", session_path(session[:user_id]), method: :delete if session[:user_id] %>
 <p id="notice">
   <%= notice %>
 </p>
 <h1>Listing Questions</h1>
 <ul>
-  <% @questions.each do |question| %>
+
+<%= search_form_for @q do |f| %>
+
+  <%= f.label "Term Search:" %>
+  <%= f.search_field :title_or_body_cont %>
+  <%= f.submit %>
+<% end %>
+
+  <% @results.each do |question| %>
     <li>
       <%= link_to question.title.to_s, question %>
         Answers Given: <%= question.answers.count %>
@@ -21,7 +28,6 @@
     <% end %>
   <% end %>
 </ul>
-<br/>
-<% if current_user %>
-  <%= link_to 'New Question', new_question_path %>
-<% end %>
+<div>
+  <%= paginate @results %>
+</div>
