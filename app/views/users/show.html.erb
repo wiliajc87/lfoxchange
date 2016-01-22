@@ -5,14 +5,23 @@
   <strong>Name:</strong>
   <%= @user.name %>
   <% unless @questions.empty? %>
-    <h2>Your Questions: </h2>
+    <h2>Questions: </h2>
       <% @questions.each do |question| %>
         <ul>
           <li><%= link_to question.title, question_path %></li>
         </ul>
       <% end %>
     <% else %>
-      <h3>You haven't asked any questions yet!</h3>
-      <%= link_to 'New Question', new_question_path %>
+      <h3>No questions yet!</h3>
+    <% end %>
+  <% unless @answers.empty? %>
+    <h2>Questions: </h2>
+      <% @answers.each do |answer| %>
+        <ul>
+          <li><%= link_to answer.body[0..30].gsub(/\s\w+\s*$/, '...'), question_path(answer.question.id) %></li>
+        </ul>
+      <% end %>
+    <% else %>
+      <h3>No questions yet!</h3>
     <% end %>
 </p>

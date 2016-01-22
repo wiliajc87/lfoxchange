@@ -1,19 +1,23 @@
 <p id="notice">
   <%= notice %>
 </p>
-<h1>Listing Questions</h1>
 <ul>
 
 <%= search_form_for @q do |f| %>
-
-  <%= f.label "Term Search:" %>
-  <%= f.search_field :title_or_body_cont %>
-  <%= f.submit %>
+  <div class="field">
+    <%= f.label "Search:" %>
+    <%= f.search_field :title_or_body_cont %>
+  <div class="btn">
+    <%= f.submit %>
+  </div>
+  </div>
 <% end %>
 
+<h4>Most Recent Questions:</h4>
   <% @results.each do |question| %>
     <li>
-      <%= link_to question.title.to_s, question %>
+      <strong><%= link_to question.title.to_s, question %></strong>
+        Answers Given: <%= question.answers.count %>
     </li>
     <% if question.user == current_user %>
       <ul>
